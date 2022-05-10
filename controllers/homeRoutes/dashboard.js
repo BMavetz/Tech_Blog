@@ -9,4 +9,8 @@ router.get('/',(req,res)=>{
     res.redirect('/login');
 })
 
+router.get('/post',(req,res)=>{
+        res.render('newPost', {loggedIn:req.session.loggedIn});
+})
+
 module.exports = router;
