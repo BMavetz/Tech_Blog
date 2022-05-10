@@ -25,26 +25,11 @@
     color: red;
     font-family: 'Anton', sans-serif;
   }
-  .topia2{
-    color: yellow;
-    font-family: 'Anton', sans-serif;
-  }
-  .topia3{
-    color: orange;
-    font-family: 'Anton', sans-serif;
-  }
-  .topia4{
-    color: purple;
-    font-family: 'Anton', sans-serif;
-  }
-  .topia5{
-    color: blue;
-    font-family: 'Anton', sans-serif;
-  }
+  
   .navBar{
   
     padding-left: 1%;
-    background-image: linear-gradient(to bottom right, #008C76FF, #9ED9CCFF);
+    background-image: linear-gradient(to bottom right, rgb(0, 65, 140), rgb(158, 182, 217));
   }
   .nav-text{
     color: rgb(46, 54, 219);
