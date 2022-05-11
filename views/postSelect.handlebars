@@ -1,3 +1,18 @@
-Post here
+<div class = "blog_post">
 
+</div>
+
+<div class = "comment_div">
+        {{#if loggedIn}}
+            <label for="blogPost">Leave A Comment:</label>
+            <textarea class="form-control" id="comment_input" rows="2" placeholder="comment"></textarea>
+        {{else}}
+            <div>User must login to comment.</div>
+        {{/if}}
+</div>
+
+<section class = "commentFeed">
+    <div class="overflow-auto" id = "comments-scroll">
+    </div>
+</section>
 <script src="./js/postSelect.js"></script>
