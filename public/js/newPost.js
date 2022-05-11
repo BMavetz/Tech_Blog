@@ -8,7 +8,7 @@ const createPost = async (event) => {
     if (title && content){
         const response = await fetch('/api/request', {
             method: 'POST',
-            body: JSON.stringify({ content, title, date }),
+            body: JSON.stringify({ content, title}),
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {

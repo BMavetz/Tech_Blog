@@ -16,7 +16,9 @@ getBlogPosts();
 
 const addPost = (post) => {
     const postItem = document.createElement("div");
-    postItem.innerHTML = `<div class = "blog_post" data-id=${post.id}><span data-id=${post.id} class = "post_header"><div>${post.title}</div><div>By: ${post.user.user_name}, date: ${post.date}</div></span><span class = "post_body">${post.body}</span></div>`;
+    postItem.classList.add("blog_post");
+    postItem.setAttribute("data-id", post.id);
+    postItem.innerHTML = `<div class = "post_header"><div class = "post_title">${post.title}</div><div class = "user_info">${post.user.user_name}, Date: ${post.date}</div></div><div class = "post_body">${post.body}</div>`;
     blogPosts.append(postItem);
 }
 

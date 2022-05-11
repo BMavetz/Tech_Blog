@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
   }
+
+  main{
+    background-color: beige;
+  }
   
   /* Set the size of the div element that contains the map */
   #map {
@@ -35,7 +39,37 @@
     color: rgb(46, 54, 219);
     font-weight: bolder;
   }
-  #homepage-contents {
+  #blogPost-scroll {
+    Height: 75vh;
+    width: 50%;
+    border: darkgreen solid 5px;
+    background-color: #877373;
+  }
+
+  .blog_post{
+    margin: 5%;
+    border: solid 2px black;
+    border-radius: 5pt;
+    padding: 10px;
+    background-color: #e6e9ec;
+  }
+
+  .post_header{
+    margin: 0 0 2% 3%;
+    border-bottom: dashed black;
+    color: darkblue;
+  }
+
+  .post_title{
+    font-size: 15pt;
+  }
+
+  .user_info{
+    font-style: italic;
+    font-size: 9pt;
+  }
+
+  .blogFeed{
     display: flex;
     justify-content: center;
   }
