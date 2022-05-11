@@ -1,6 +1,6 @@
 const router = require('express').Router()
 // const { DataTypes } = require('sequelize/types');
-const {User} = require("../../models")
+const {User, Post} = require("../../models")
 
 // this is registering
 router.post("/",async (req,res)=>{
@@ -51,5 +51,17 @@ router.post("/logout",(req,res)=>{
         res.status(200).json({message:'You are now logged out.'})
     })
 })
+
+router.get("/",async(req,res)=>{
+    try{
+        const results = await User.findByPk(req.session.userId,{
+            include:[{model:Post}]
+        });
+        res.json(results)
+    }catch(err){
+        res.status(500).json({message:'bad request1'})
+    }
+})
+
 
 module.exports = router;
