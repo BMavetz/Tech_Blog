@@ -47,4 +47,22 @@ router.get("/",async(req,res)=>{
     }
 })
 
+router.put("/update", async (req,res) => {
+    try{
+        console.log(req.body);
+        const requestData = await Post.update(req.body, {
+            where: {
+                id: req.session.postId,
+            },
+        });
+        if (!requestData[0]){
+            res.status(404).json({message: 'No request with this ID.'});
+            return;
+        }
+        res.status(200).json(requestData);
+    }catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 module.exports = router;
