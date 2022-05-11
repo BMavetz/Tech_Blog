@@ -1,3 +1,8 @@
+<div class="back_btn">
+    <button class = "homepage_btn" type = "submit">Back</button>
+</div>
+
+
 <div class = "blog_post">
 
 </div>
@@ -6,6 +11,9 @@
         {{#if loggedIn}}
             <label for="blogPost">Leave A Comment:</label>
             <textarea class="form-control" id="comment_input" rows="2" placeholder="comment"></textarea>
+            <div class = "add-btn">
+                <button type="button" class="btn btn-primary btn-lg submit-comment">Add Comment</button>
+            </div>
         {{else}}
             <div>User must login to comment.</div>
         {{/if}}
