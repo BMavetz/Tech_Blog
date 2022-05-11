@@ -1,4 +1,4 @@
-
+const updateBtn = $("#updateBtn");
 
 const getBlogPost = async () =>{
     const response = await fetch('api/post',{
@@ -14,4 +14,25 @@ const addPost = (post) => {
     document.querySelector('#blogContent').value = post.body;
 }
 
+const updatePost = async (event) => {
+    const title = document.querySelector(`#titleInput`).value.trim();
+    const body = document.querySelector(`#blogContent`).value.trim();
+    const date = new Date().toLocaleDateString();
+    if(title && body){
+    const response = await fetch(`api/post/update`,{
+        method: 'PUT',
+        body: JSON.stringify({body,title,date}),
+        headers: { 'Content-Type': 'application/json' },
+    })
+    if (response.ok) {
+        location.replace("/dashboard")
+    }else{
+        console.log("could not update");
+    }
+    }else{
+        console.log("update failed, fill in both title and body");
+    }
+}
+
+updateBtn.on("click", updatePost)
 getBlogPost();
