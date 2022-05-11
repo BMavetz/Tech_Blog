@@ -54,6 +54,21 @@
     background-color: #e6e9ec;
   }
 
+  .dashboard{
+    display: flex;
+  }
+
+  .add-btn{
+    width: 30%;
+  }
+
+  .comment{
+    text-align: right;
+    font-size: small;
+    margin-top: 7px;
+    color: darkred;  
+  }
+
   .post_header{
     margin: 0 0 2% 3%;
     border-bottom: dashed black;

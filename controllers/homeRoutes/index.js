@@ -11,4 +11,12 @@ router.get("/",(req,res)=>{
     res.render('homepage',{loggedIn:req.session.loggedIn});
 })
 
+router.get("/select",(req,res)=>{
+    if (req.session.loggedIn){
+        res.render('postSelect',{loggedIn:req.session.loggedIn})
+        return
+    }
+    res.redirect('/login');
+})
+
 module.exports = router;
