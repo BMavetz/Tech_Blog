@@ -1,9 +1,10 @@
 * {
     box-sizing: border-box;
   }
-
+body{
+  background-color: beige;
+}
   main{
-    background-color: beige;
     padding-top: 2%;
   }
   
@@ -42,7 +43,7 @@
   }
   #blogPost-scroll {
     border-radius: 3pt;
-    Height: 75vh;
+    Height: 81vh;
     width: 50%;
     border: darkgreen solid 5px;
     background-color: #877373;
@@ -81,6 +82,12 @@
 
   .add-btn{
     width: 30%;
+    margin-left: 15px;
+  }
+
+  .new-post{
+    background-color: #115e4d;
+    border-color: #115e4d;
   }
 
   .comment{
@@ -157,6 +164,13 @@
     display: flex;
     justify-content: center;
   }
+
+  #inputForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
   #homepage-contents h3{
     width: 400px;
     margin-left: 2%;
@@ -195,9 +209,21 @@
   .login-text{
     color: black;
   }
+
   .formBtn{
     float: right;
   }
+
+  .submit-post{
+    margin-left: 10%;
+    background-color: #207020;
+    border-color: #207020;
+  }
+  
+.input-form-group{
+  width: 80%;
+}
+
   .homepage_btn{
     background-color: rgb(165 105 96);
     margin-left: 10px;

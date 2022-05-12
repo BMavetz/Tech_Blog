@@ -30,7 +30,7 @@ const getUserPosts = async () =>{
 const addPost = (post) => {
     console.log(post);
     const postItem = document.createElement("div");
-    postItem.classList.add("blog_post");
+    postItem.classList.add("blog_posts");
     postItem.setAttribute("data-id", post.id);
     postItem.innerHTML = `<div class = "post_header"><div class = "post_title">${post.title}</div><div class = "post_info"> Date: ${post.date}</div></div><div class = "post_body">${post.body}</div>`;
     userPosts.prepend(postItem);
