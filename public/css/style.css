@@ -44,7 +44,7 @@ body{
   #blogPost-scroll {
     border-radius: 3pt;
     Height: 81vh;
-    width: 50%;
+    width: 60%;
     border: darkgreen solid 5px;
     background-color: #877373;
   }
@@ -163,9 +163,10 @@ body{
   .blogFeed{
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
-  #inputForm{
+  #inputForm, #updateForm{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -214,12 +215,12 @@ body{
     float: right;
   }
 
-  .submit-post{
+  .submit-post, #updateBtn{
     margin-left: 10%;
     background-color: #207020;
     border-color: #207020;
   }
-  
+
 .input-form-group{
   width: 80%;
 }

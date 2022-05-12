@@ -12,8 +12,7 @@ Comment.init(
             autoIncrement: true,
         },
         date: {
-            type: DataTypes.DATE,
-            defaultValue: DataTypes.NOW,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         user_comment: {

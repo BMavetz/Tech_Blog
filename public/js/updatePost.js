@@ -17,11 +17,10 @@ const addPost = (post) => {
 const updatePost = async (event) => {
     const title = document.querySelector(`#titleInput`).value.trim();
     const body = document.querySelector(`#blogContent`).value.trim();
-    const date = new Date().toLocaleDateString();
     if(title && body){
     const response = await fetch(`api/post/update`,{
         method: 'PUT',
-        body: JSON.stringify({body,title,date}),
+        body: JSON.stringify({body,title}),
         headers: { 'Content-Type': 'application/json' },
     })
     if (response.ok) {

@@ -39,13 +39,12 @@ const addComment = async (comment) => {
 
 
 const createComment = async () => {
-    //event.preventDefault();
-    // const date = new Date().toLocaleDateString();
+    const date = new Date().toLocaleDateString();
     const comment = document.querySelector('#comment_input').value.trim();
     if (comment){
         const response = await fetch('/api/comment', {
             method: 'POST',
-            body: JSON.stringify({ comment}),
+            body: JSON.stringify({ comment, date}),
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {

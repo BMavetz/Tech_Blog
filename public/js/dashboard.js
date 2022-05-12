@@ -45,5 +45,5 @@ const editPost = async (event) => {
     location.replace("/update")
 }
 
-postEdit.on("click", ".blog_post", editPost);
+postEdit.on("click", ".blog_posts", editPost);
 getUserPosts();

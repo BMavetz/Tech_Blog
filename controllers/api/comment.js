@@ -6,7 +6,7 @@ router.post("/",async (req,res)=>{
         const newComment = await Comment.create({
             user_comment:req.body.comment,
             post_id:req.session.postId,
-            // date: req.body.date,
+            date: req.body.date,
             user_id: req.session.userId
         });
         console.log(req.session);

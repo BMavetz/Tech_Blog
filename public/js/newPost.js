@@ -13,7 +13,7 @@ const createPost = async () => {
         });
         if (response.ok) {
             console.log(response)
-            document.location.replace('/')
+            document.location.replace('/dashboard')
         } else {
             console.log('could not create post');
         }
@@ -23,5 +23,3 @@ const createPost = async () => {
 }
 
 submitPost.on("click", createPost)
-// createPost();
-// document.querySelector('.create-post').addEventListener('submit', createPost);
