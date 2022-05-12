@@ -63,5 +63,15 @@ router.get("/",async(req,res)=>{
     }
 })
 
+router.get("/:id",async(req,res)=>{
+    try{
+        const results = await User.findByPk(req.params.id);
+        res.json(results)
+    }catch(err){
+        res.status(500).json({message:'bad request1'})
+    }
+})
+
+
 
 module.exports = router;

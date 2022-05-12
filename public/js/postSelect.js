@@ -1,5 +1,5 @@
-const blogPost = document.querySelector(".blog_post");
-const clearBlogPost = $(".blog_post")
+const blogPost = document.querySelector(".selected_post");
+const clearBlogPost = $(".selected_post")
 const commentList = document.querySelector("#comments-scroll");
 const clearComment = $("#comments-scroll");
 const submitComment = $(".submit-comment");
@@ -18,21 +18,22 @@ const getBlogPost = async () =>{
 
 const addPost = (post) => {
     const postItem = document.createElement("div");
-    postItem.classList.add("blog_post");
+    postItem.classList.add("single_post");
     postItem.innerHTML = `<div class = "post_header"><div class = "post_title">${post.title}</div><div class = "user_info">${post.user.user_name}, Date: ${post.date}</div></div><div class = "post_body">${post.body}</div>`;
-    const user = post.user.user_name;
     blogPost.append(postItem);
     const commentData = post.comments;
     commentData.forEach(element => {
         
-        addComment(element, user);
+        addComment(element);
     });
 }
 
-const addComment = (comment, user) => {
+const addComment = async (comment) => {
+    const response = await fetch(`api/user/${comment.user_id}`);
+    const data = await response.json();
     const commentItem = document.createElement("div");
     commentItem.classList.add("blog_comment");
-    commentItem.innerHTML = `<div class = "comment_body">${comment.user_comment}</div><div class = "comment_info">username: ${user} , Date: ${comment.date}</div>`;
+    commentItem.innerHTML = `<div class = "comment_body">${comment.user_comment}</div><div class = "comment_info">username: ${data.user_name} , Date: ${comment.date}</div>`;
     commentList.prepend(commentItem);
 }
 

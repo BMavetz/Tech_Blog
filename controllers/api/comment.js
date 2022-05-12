@@ -9,6 +9,7 @@ router.post("/",async (req,res)=>{
             // date: req.body.date,
             user_id: req.session.userId
         });
+        console.log(req.session);
         res.json({newComment})
     }catch(err){
         res.status(500).json(err)

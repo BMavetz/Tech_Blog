@@ -17,7 +17,7 @@ getBlogPosts();
 const addPost = (post) => {
     const postItem = document.createElement("div");
     const numComment = post.comments.length;
-    postItem.classList.add("blog_post");
+    postItem.classList.add("blog_posts");
     postItem.setAttribute("data-id", post.id);
     postItem.innerHTML = `<div class = "post_header"><div class = "post_title">${post.title}</div><div class = "user_info">${post.user.user_name}, Date: ${post.date}</div></div><div class = "post_body">${post.body}</div><div class = "comment">Total Comments: ${numComment}</div>`;
     blogPosts.prepend(postItem);
@@ -34,4 +34,4 @@ const viewPost = async (event) => {
 
 
 
-showPost.on("click", ".blog_post", viewPost);
+showPost.on("click", ".blog_posts", viewPost);

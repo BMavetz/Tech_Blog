@@ -4,6 +4,7 @@
 
   main{
     background-color: beige;
+    padding-top: 2%;
   }
   
   /* Set the size of the div element that contains the map */
@@ -40,18 +41,38 @@
     font-weight: bolder;
   }
   #blogPost-scroll {
+    border-radius: 3pt;
     Height: 75vh;
     width: 50%;
     border: darkgreen solid 5px;
     background-color: #877373;
   }
 
-  .blog_post{
+  .blog_posts{
     margin: 5%;
     border: solid 2px black;
     border-radius: 5pt;
     padding: 10px;
     background-color: #e6e9ec;
+    box-shadow: 5px 2px 2px #1f1a1a;
+  }
+
+  .single_post{
+    margin: 2% 0;
+    border: solid 2px black;
+    border-radius: 5pt;
+    padding: 10px;
+    background-color: #e6e9ec;
+    box-shadow: 5px 2px 2px lightgrey;
+    width: 50%;
+  }
+
+  .blog_comment{
+    margin: 10px 10px 0 10px;
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 5pt;
+    box-shadow: 5px 2px 2px lightgrey;
   }
 
   .dashboard{
@@ -67,6 +88,54 @@
     font-size: small;
     margin-top: 7px;
     color: darkred;  
+  }
+
+  .comment_body{
+    margin: 2% 0;
+    font-size: 13pt;
+  }
+  
+  .comment_info{
+    color: #6f6a6a;
+    font-style: italic;
+    font-size: x-small;
+  }
+
+  .comment_div, .add_comment{
+    justify-content: center;
+    display: flex;
+  }
+
+  .leave_comment{
+    width: 70%;
+    margin-bottom: 30px;
+  }
+
+  .submit-comment{
+    background-color: #16741d;
+    border-color: #16741d;
+}
+ 
+#comment_input{
+  margin: 10px 0;
+}
+
+  #noUser {
+    width: fit-content;
+    justify-content: center;
+    background-color: #c13c3c57;
+    padding: 5px 5px 0 5px;
+    margin-bottom: 1%;
+    color: #1f4b54;
+    font-weight: bold;
+  }
+
+  #comments-scroll{
+    height: 31vh;
+    border: 2px solid #6c6b6b;
+    background-color: white;
+    margin-bottom: 9px;
+    width: 40%;
   }
 
   .post_header{
@@ -129,19 +198,18 @@
   .formBtn{
     float: right;
   }
-  .back_btn{
-    margin: 1%;
+  .homepage_btn{
+    background-color: rgb(165 105 96);
+    margin-left: 10px;
   }
-  #pantry {
-    color:darkgreen;
+ 
+  .selected_post, .commentFeed{
+    justify-content: center;
+    display: flex;
   }
   
-  #address {
-    color:cornflowerblue;
-  }
-  #product {
-    color:crimson;
-  }
+  
+
   input:placeholder-shown {
     font-style: italic;
   }
@@ -167,43 +235,7 @@
     z-index: 10;
   }
   
-  #card1{
-    color: white;
-    background-image: linear-gradient(to bottom right, red, #f46d75) 
-  }
-  
-  #card2{
-    color: white;
-    background-image: linear-gradient(to bottom right, orange, #ffcb62) 
-  }
-  
-  #card3{
-    color: rgb(35, 141, 35);
-    background-image: linear-gradient(to bottom right, yellow, #faf3c0)
-  }
-  #card4{
-    color: yellow;
-    background-image: linear-gradient(to bottom right, purple, #8962a1)
-  }
-  .pantryStuff{
-    margin: 2%;
-    display: flex;
-    justify-content: center;
-  }
-  .pantryCard{
-    margin: 1%;
-    box-shadow: 5px 2px 2px #605a5b;
-    border-radius: 10px 0 10px 0;
-    background-color: beige;
-  
-  }
-  .pantryBtn{
-    background-color: rgb(91, 91, 224);
-    color: white;
-    border-radius: 10px;
-    padding: 5px;
-  }
-  
+    
   .new_item{
     background-color: rgb(78, 37, 25);
       color: white;
@@ -288,10 +320,6 @@
   
   .reqPadding {
     padding-right: 6px;
-  }
-  
-  #pantry_requests {
-    width: fit-content;
   }
   
   .isActivated, .isAddedMessage {
