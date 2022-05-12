@@ -1,21 +1,13 @@
 # Tech_Blog
-# 14 Model-View-Controller (MVC): Tech Blog
 
-## Your Task
+This application uses the MVC file structure to create a blog application where users can sign-up and login in to post comments that are displayed on the homepage as a scroll in a blog format.  The user is able to leave comments on existing blogs if they are logged in, and can choose to edit, or delete previous blogs they have made if they wish by navigating to the dashboard. 
 
 Writing about tech can be just as important as making it. Developers spend plenty of time creating new applications and debugging existing codebases, but most developers also spend at least some of their time reading and writing about technical concepts, recent advancements, and new technologies. A simple Google search for any concept covered in this course returns thousands of think pieces and tutorials from developers of all skill levels!
 
 Your task this week is to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. You’ll build this site completely from scratch and deploy it to Heroku. Your app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
-## User Story
 
-```md
-AS A developer who writes about tech
-I WANT a CMS-style blog site
-SO THAT I can publish articles, blog posts, and my thoughts and opinions
-```
-
-## Acceptance Criteria
+## Application Functionality
 
 ```md
 GIVEN a CMS-style blog site
@@ -53,82 +45,33 @@ WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
 
-## Mock-Up
+## Application Images
 
-The following animation demonstrates the application functionality:
+The following images show the main navigation routes of the site:
 
-![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./Assets/14-mvc-homework-demo-01.gif) 
+The user begins on the homepage, where a list of existing blogs is displayed, if any exist in the database.
+![Image of techblog homepage.](./Assets/Homepage_img.JPG)
 
-## Getting Started
+The user can access the login/sign-up page to create and/or login into their account.  Once logged in, a user has access to the dashboard where blogs that they have written are accessible to be edited or deleted.  The user can also leave comments on the blogs written by others.
+![Image of login / sign-up page.](./Assets/login_signup_img.JPG)
 
-Your application’s folder structure must follow the Model-View-Controller paradigm. You’ll need to use the [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for your Views, use the [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize) packages to connect to a MySQL database for your Models, and create an Express.js API for your Controllers.
+If the user clicks on a blog on the homepage, they are then directed to a screen showing the comments left on the blog, and have the option to leave their own comment as well.
+![Image of comment page.](./Assets/Comment_page_img.JPG)
 
-You’ll also need the [dotenv package](https://www.npmjs.com/package/dotenv) to use environment variables, the [bcrypt package](https://www.npmjs.com/package/bcrypt) to hash passwords, and the [express-session](https://www.npmjs.com/package/express-session) and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) packages to add authentication.
+The dashboard is where the user can navigate if they want to see their own blogs that they have written.  By clicking on one of the blogs, they can edit the content or delete the post.  The user can also create new posts from this page.
+![Image of techblog dashboard.](./Assets/Dashboard_img.JPG)
 
-**Note**: The [express-session](https://www.npmjs.com/package/express-session) package stores the session data on the client in a cookie. When you are idle on the site for more than a set time, the cookie will expire and you will be required to log in again to start a new session. This is the default behavior and you do not have to do anything to your application other than implement the npm package.
+## Running the application
 
-## Grading Requirements
+If an individual wishes to run this application from their VS code server, they must download the file and folder structure.  A .env file must be created to contain the following
+```
+DB_NAME="techblog_db"
+DB_USER='root'
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+DB_PASSWORD= your mysql password here
+```
 
-This Challenge is graded based on the following criteria:
+Then run "npm i" to install all packages, and run the application using "node server.js".  The application will run on localhost port 3001.
 
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-    * Application’s folder structure follows the Model-View-Controller paradigm.
-
-    * Uses the [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for your Views.
-
-    * Application must be deployed to Heroku.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Application Quality: 15%
-
-* User experience is intuitive and easy to navigate.
-
-* User interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-
+The application also is live on Heroku, and can be accessed using the following web address:
+[Web address here](https://www.npmjs.com/package/express-handlebars) 

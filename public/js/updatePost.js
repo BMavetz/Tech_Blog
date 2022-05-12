@@ -1,4 +1,5 @@
 const updateBtn = $("#updateBtn");
+const deleteBtn = $("#deleteBtn");
 
 const getBlogPost = async () =>{
     const response = await fetch('api/post',{
@@ -33,5 +34,17 @@ const updatePost = async (event) => {
     }
 }
 
+const removePost = async (event) => {
+    const response = await fetch('api/post/delete',{
+        method: 'DELETE',
+    });
+    if (response.ok) {
+        location.replace("/dashboard")
+    }else{
+        console.log("could not update");
+    }
+}
+
 updateBtn.on("click", updatePost)
+deleteBtn.on("click", removePost)
 getBlogPost();
