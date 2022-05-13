@@ -1,4 +1,4 @@
-// const publishPost = $(".publish-post");
+const publishPost = $(".publish-post");
 
 const createPost = async () => {
     //event.preventDefault();
@@ -22,4 +22,4 @@ const createPost = async () => {
     }
 }
 
-// publishPost.on("click", createPost)
+publishPost.on("click", createPost)

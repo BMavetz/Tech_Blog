@@ -208,7 +208,7 @@ body{
     float: right;
   }
 
-  .submit-post, #updateBtn{
+  .publish-post, #updateBtn{
     margin-left: 10%;
     background-color: #207020;
     border-color: #207020;
