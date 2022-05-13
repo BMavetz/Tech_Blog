@@ -74,4 +74,4 @@ DB_PASSWORD= your mysql password here
 Then run "npm i" to install all packages, and run the application using "node server.js".  The application will run on localhost port 3001.
 
 The application also is live on Heroku, and can be accessed using the following web address:
-[Web address here](https://www.npmjs.com/package/express-handlebars) 
+[https://secure-ravine-93790.herokuapp.com/](https://secure-ravine-93790.herokuapp.com/) 
